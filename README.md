@@ -16,7 +16,7 @@
 
 ## Модель
 
-**Ridge-регрессия** (линейная регрессия с L2-регуляризацией) — разобрана на лекциях, не использовалась на практике.
+**Ridge-регрессия** (линейная регрессия с L2-регуляризацией).
 
 - В фреймворке: `sklearn.linear_model.Ridge`, подбор `alpha` через `GridSearchCV` (5-fold CV).
 - Собственная реализация: `src/ridge_gd.py`, класс `MyRidgeGD` — мини-батчевый градиентный спуск. Гиперпараметры: `lr`, `n_iter`, `alpha`, `batch_size`.
@@ -58,16 +58,6 @@ MAE по сплитам:
 На test: Ridge (sklearn) — MSE 20 576 433, R² 0.8256; MyRidgeGD — MSE 21 029 100, R² 0.8217; baseline — R² -0.0374.
 
 Собственная реализация отличается от sklearn менее чем на 1%, переобучения нет (train/val/test близки).
-
-## Запуск
-
-```bash
-python -m venv .venv
-.venv\Scripts\Activate.ps1        # Windows
-pip install -r requirements.txt
-```
-
-Открыть `lab.ipynb` в Jupyter / VS Code и выполнить ячейки сверху вниз.
 
 ## Стек
 
